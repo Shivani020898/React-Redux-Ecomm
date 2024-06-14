@@ -1,26 +1,27 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const selectObj = useSelector((store) => store.CartReducer);
   return (
     <div>
-      <nav class="navbar navbar-light bg-primary">
+      <nav class="navbar navbar-light bg-primary ">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <Link class="navbar-brand fs-2" to="#">
             Navbar
-          </a>
+          </Link>
 
-          <a class="nav-link active" aria-current="page" href="#">
+          <Link class="nav-link active fs-2" aria-current="page" to="/">
             Home
-          </a>
+          </Link>
 
-          <a class="nav-link active" aria-current="page" href="#">
+          <Link class="nav-link active fs-2" aria-current="page" to="/additem">
             AddItem
-          </a>
+          </Link>
 
-          <a class="navbar-brand" href="#">
+          <Link class="navbar-brand fs-2" to="/cart">
             Cart : {selectObj.cartItem.length}
-          </a>
+          </Link>
         </div>
       </nav>
     </div>

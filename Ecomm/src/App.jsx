@@ -11,6 +11,7 @@ import { persistReducer,persistStore } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react'
 import RootReducer from './Reducers/RootReducer'
+import Footer from './Footer'
 const App = () => {
   const persistConfig = {
     key : 'root',
@@ -34,6 +35,7 @@ const App = () => {
      </Routes>
       </PersistGate>
    </Provider>
+
     </div>
   )
 }

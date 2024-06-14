@@ -23,8 +23,16 @@ const initialData = {
   ],
 };
 
-function ItemsReducer(state = initialData){
-      return state
+function ItemsReducer(state = initialData,action) {
+  switch (action.type) {
+    case 'ADD_ITEM':
+      return {
+        ...state,
+        items: [...state.items, action.payload]
+      };
+    default:
+      return state;
+  }
 }
 
-export default ItemsReducer
+export default ItemsReducer;

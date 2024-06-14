@@ -2,8 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-       <h1>This is Footer Component</h1>
+    <div style={{backgroundColor:'blue',color:'white',padding:'10px'}}>
+   <p>Designed and Developed By</p>
+   <p>Shivani Tiwari</p>
     </div>
   )
 }

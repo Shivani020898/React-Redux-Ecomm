@@ -1,0 +1,8 @@
+h1 {
+  font-size: 18px;
+  color: blue;
+}
+.img-fluid{
+  /* !important: This keyword overrides any other height declarations for the same elements, giving this rule the highest priority. */
+  height: 200px !important;
+}
